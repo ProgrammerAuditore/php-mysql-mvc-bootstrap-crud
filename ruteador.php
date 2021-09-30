@@ -1,7 +1,13 @@
 <?php
-include_once("controladores/controlador_paginas.php");
+// El routeador sirve para cambiar entre las distintas 
+// controladores y vistas de nuestro página web.
 
-$controlador = new ControladorPaginas();
-$controlador->inicio();
+include_once("controladores/controlador_".$controlador.".php");
+
+$objControlador = "Controlador".ucfirst($controlador);
+
+$controlador = new $objControlador();
+
+$controlador->$accion();
 
 ?>
