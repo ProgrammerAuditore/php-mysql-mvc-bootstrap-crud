@@ -15,7 +15,7 @@
               <input type="email" class="form-control" name="correo" id="correo" placeholder="Correo del empleado">
             </div>
 
-            <input name="" id="" class="btn btn-success" type="button" value="Agregar empleado">
+            <input name="" id="" class="btn btn-success" type="submit" value="Agregar empleado">
         </form>
     </div>
 </div>
