@@ -1,3 +1,3 @@
 <?php
-    print "Hola mundo";
+  require_once("./vistas/template.php");
 ?>
