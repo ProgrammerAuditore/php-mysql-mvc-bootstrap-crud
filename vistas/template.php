@@ -12,6 +12,14 @@
   </head>
   <body>
       
+  <nav class="navbar navbar-expand navbar-light bg-light">
+      <div class="nav navbar-nav">
+          <a class="nav-item nav-link active" href="#">Sistema <span class="visually-hidden">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Home</a>
+          <a class="nav-item nav-link" href="#">Empleados</a>
+      </div>
+  </nav>
+
   <div class="container">
     <div class="row">
       <div class="col-12">
