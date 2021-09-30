@@ -2,6 +2,29 @@
 
 class Empleado {
 
+    public $id;
+    public $nombre;
+    public $correo;
+
+    public function __construct($id, $nombre, $correo){
+        $this->id=$id;
+        $this->nombre=$nombre;
+        $this->correo=$correo;
+    }
+
+    public static function consultar(){
+        $listEmpleados = [];
+        $conexion = BD::crearInstancia();
+        $sql = $conexion->query("SELECT * FROM tblempleados");
+
+        foreach($sql->fetchAll() as $empleado){
+            $listEmpleados[] = new Empleado($empleado['emplID'], $empleado['emplNombre'], $empleado['emplCorreo'] );   
+
+        }
+        
+        return $listEmpleados;
+    }
+
     public static function crear($nombre, $correo){
         $conexion = BD::crearInstancia();
         
