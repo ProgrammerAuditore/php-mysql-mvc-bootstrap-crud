@@ -16,6 +16,7 @@
             </div>
 
             <input name="" id="" class="btn btn-success" type="submit" value="Agregar empleado">
+            <a class="btn btn-primary" href="./?controlador=empleados&accion=inicio" role="button">Cancelar</a>
         </form>
     </div>
 </div>
