@@ -34,14 +34,14 @@ class ControladorEmpleados{
 
         $id = $_GET['id'];
 
-        print_r( Empleado::buscar($id) );
+        $empleado = Empleado::buscar($id);
 
         include_once("vistas/empleados/Editar.php");
     }
 
     public function borrar(){
         // *Validar datos*
-        print_r($_GET);
+        //print_r($_GET);
         
         $id = $_GET['id'];
 

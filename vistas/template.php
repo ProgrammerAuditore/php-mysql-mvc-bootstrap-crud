@@ -16,7 +16,7 @@
       <div class="nav navbar-nav">
           <a class="nav-item nav-link active" href="#">Sistema <span class="visually-hidden">(current)</span></a>
           <a class="nav-item nav-link" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">Empleados</a>
+          <a class="nav-item nav-link" href="./?controlador=empleados&accion=inicio">Empleados</a>
       </div>
   </nav>
 
