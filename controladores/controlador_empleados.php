@@ -32,6 +32,16 @@ class ControladorEmpleados{
 
     public function editar(){
 
+        if($_POST){
+            print_r($_POST);
+            $id = $_POST['id'];
+            $nombre = $_POST['nombre'];
+            $correo = $_POST['correo'];
+
+            Empleado::editar($id, $nombre, $correo);
+            header("Location: ./?controlador=empleados&accion=inicio");
+        }
+
         $id = $_GET['id'];
 
         $empleado = Empleado::buscar($id);

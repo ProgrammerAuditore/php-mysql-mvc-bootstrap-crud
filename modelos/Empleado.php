@@ -50,6 +50,14 @@ class Empleado {
         return new  Empleado($empleado['emplID'], $empleado['emplNombre'], $empleado['emplCorreo'] );
     }
 
+    public static function editar($id, $nombre, $correo){
+        $conexion = BD::crearInstancia();
+        $sql = $conexion->prepare("UPDATE tblempleados SET emplNombre=?, emplCorreo=? WHERE emplID=?");
+        $sql->execute(array($nombre, $correo, $id));
+        
+
+    }
+
 }
 
 
