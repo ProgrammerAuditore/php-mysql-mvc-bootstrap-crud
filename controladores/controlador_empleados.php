@@ -23,6 +23,7 @@ class ControladorEmpleados{
             $correo = $_POST['correo'];
             
             Empleado::crear($nombre, $correo);
+            header("Location: ./?controlador=empleados&accion=inicio");
 
         }
          
@@ -31,6 +32,16 @@ class ControladorEmpleados{
 
     public function editar(){
         include_once("vistas/empleados/Editar.php");
+    }
+
+    public function borrar(){
+        // *Validar datos*
+        print_r($_GET);
+        
+        $id = $_GET['id'];
+
+        Empleado::borrar($id);
+        header("Location: ./?controlador=empleados&accion=inicio");
     }
 
 }

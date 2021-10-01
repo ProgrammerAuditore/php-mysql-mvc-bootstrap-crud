@@ -33,6 +33,14 @@ class Empleado {
 
     }
 
+    public static function borrar($id){
+        $conexion = BD::crearInstancia();
+        
+        $sql = $conexion->prepare("DELETE FROM tblempleados WHERE emplID = ?");
+        $sql->execute(array($id));
+
+    }
+
 }
 
 

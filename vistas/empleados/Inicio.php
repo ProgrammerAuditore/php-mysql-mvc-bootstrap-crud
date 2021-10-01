@@ -1,3 +1,5 @@
+<a class="btn btn-success" href="?controlador=empleados&accion=crear" role="button">Crear empleado</a>
+
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -17,8 +19,12 @@
             <td><?php print $empleado->correo; ?></td>
             <td>
             <div class="btn-group" role="group">
-                <a class="btn btn-warning" href="#" role="button">Editar</a>
-                <a class="btn btn-danger" href="#" role="button">Borrar</a>    
+                <a class="btn btn-warning" 
+                href="?controlador=empleados&accion=editar&id=<?php print $empleado->id; ?>"
+                role="button">Editar</a>
+                <a class="btn btn-danger" 
+                href="?controlador=empleados&accion=borrar&id=<?php print $empleado->id; ?>" 
+                role="button">Borrar</a>    
             </div>
             </td>
         </tr>
