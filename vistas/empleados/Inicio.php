@@ -1,6 +1,9 @@
-<a class="btn btn-success" href="?controlador=empleados&accion=crear" role="button">Crear empleado</a>
-
-<table class="table table-bordered">
+<div class="card">
+    <div class="card-header">
+        <a class="btn btn-success" href="?controlador=empleados&accion=crear" role="button">Crear empleado</a>
+    </div>
+    <div class="card-body">
+    <table class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
@@ -32,3 +35,7 @@
     <?php }; ?>
     </tbody>
 </table>
+
+    </div>
+</div>
+
