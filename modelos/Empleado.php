@@ -41,6 +41,15 @@ class Empleado {
 
     }
 
+    public static function buscar($id){
+        $conexion = BD::crearInstancia();
+        $sql = $conexion->prepare("SELECT * FROM tblempleados WHERE emplID = ?");
+        $sql->execute(array($id));
+
+        $empleado = $sql->fetch();
+        return new  Empleado($empleado['emplID'], $empleado['emplNombre'], $empleado['emplCorreo'] );
+    }
+
 }
 
 

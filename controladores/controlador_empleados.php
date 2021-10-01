@@ -31,6 +31,11 @@ class ControladorEmpleados{
     }
 
     public function editar(){
+
+        $id = $_GET['id'];
+
+        print_r( Empleado::buscar($id) );
+
         include_once("vistas/empleados/Editar.php");
     }
 
